@@ -13,9 +13,9 @@ public class MyBinaryTree<K extends Comparable<K>> {
 		int compResult = key.compareTo(current.key);
 		if (compResult == 0)
 			return current;
-		if (compResult < 0) // if current>key -> left
+		if (compResult < 0)
 			current.left = addRecursively(current.left, key);
-		if (compResult > 0) // current<key ->right
+		if (compResult > 0)
 			current.right = addRecursively(current.right, key);
 		return current;
 	}
